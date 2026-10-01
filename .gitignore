@@ -1,0 +1,20 @@
+# === Oкружение ===
+**/.env                
+**/.env.local
+**/.env.*.local
+
+# === Python (бэкенд) ===
+**/__pycache__/
+**/*.pyc
+**/venv/
+**/env/
+**/migrations/versions/*.py  
+!**/migrations/versions/__init__.py
+
+# === Docker ===
+**/volumes/
+**/postgres_data/
+
+# === Логи ===
+*.log
+logs/
