@@ -3,7 +3,7 @@ services:
     image: postgres:15-alpine
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: CHange_ME
+      POSTGRES_PASSWORD: ${POSTGRES_USER}
       POSTGRES_DB: practice_db
     ports:
       - "5432:5432"
@@ -24,8 +24,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    environment:
-      - DATABASE_URL=postgresql+asyncpg://postgres:CHange_ME@db:5432/practice_db
+    environment: ${DATABASE_URL}
 
   frontend:
     build: ./frontend
