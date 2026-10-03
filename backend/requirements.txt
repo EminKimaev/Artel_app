@@ -4,8 +4,8 @@ sqlalchemy[asyncio]
 asyncpg
 alembic
 python-dotenv
-pwdlib[argon]
-python-jose[cryptography]
+pwdlib[argon2]
+pyjwt
 boto3
 Pillow
 fastapi-cors
